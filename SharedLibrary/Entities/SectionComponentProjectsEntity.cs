@@ -14,13 +14,13 @@ namespace SharedLibrary.Entities
 
         public String Description { get; set; }
 
-        public List<PictureEntity>? ImageSliderPictures { get; set; }
+        public virtual List<PictureEntity>? ImageSliderPictures { get; set; }
 
         public String ImageTitle { get; set; }
 
         public String ImageDescription { get; set; }
 
-        public List<PictureEntity>? IconPictures { get; set; }
+        public virtual List<PictureEntity>? IconPictures { get; set; }
 
         public SectionComponentProjectsEntity(int id, string title, string description, string imageTitle, string imageDescription)
         {

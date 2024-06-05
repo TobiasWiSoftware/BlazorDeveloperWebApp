@@ -8,11 +8,12 @@ namespace SharedLibrary.Dtos
 {
     public class EmailDto
     {
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public string Subject { get; set; }
-        public string Message { get; set; }
+        public string? Name { get; set; }
+        public string? Email { get; set; }
+        public string? Subject { get; set; }
+        public string? Message { get; set; }
 
+        public EmailDto() { }
 
         public EmailDto(string name, string email, string subject, string message)
         {

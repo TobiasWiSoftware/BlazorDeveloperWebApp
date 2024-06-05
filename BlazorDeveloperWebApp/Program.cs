@@ -13,11 +13,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.Configure<TokenServiceOptions>(builder.Configuration.GetSection("TokenServiceOptions"));
+
 builder.Services.AddControllers();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<ILoginRepo, LoginRepo>();
 builder.Services.AddScoped<ILoginService, LoginService>();
-builder.Services.AddScoped<ISectionComponentProjectsService, SectionComponentProjectsService>();
 builder.Services.AddScoped<ISectionComponentProjectsService, SectionComponentProjectsService>();
 
 
@@ -29,7 +30,6 @@ string? connectionString = builder.Configuration.GetConnectionString("DefaultCon
 
 if (connectionString != null)
 {
-    builder.Services.AddDbContext<DataBaseContext>(options => options.UseMySQL(connectionString));
     builder.Services.AddDbContext<DataBaseContext>(options =>
     {
         options.UseLazyLoadingProxies().UseMySQL(connectionString);
@@ -49,7 +49,9 @@ builder.Services.AddIdentity<UserEntity, IdentityRole>(options =>
         ).AddEntityFrameworkStores<DataBaseContext>().AddDefaultTokenProviders();
 builder.Services.AddAuthentication();
 
-builder.Services.Configure<TokenServiceOptions>(builder.Configuration.GetSection("TokenServiceOptions"));
+
+
+
 
 var app = builder.Build();
 
@@ -63,6 +65,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

@@ -13,7 +13,7 @@ namespace BlazorServer.Pages
     {
         public List<SectionComponentProjectsDto> SectionComponentItems { get; set; } = new();
 
-        public EmailDto EmailDto { get; set; }
+        public EmailDto EmailDto { get; set; } = new();
 
         private ElementReference backToTopButton;
         private string ButtonClass => isVisible ? "active" : "";
@@ -32,7 +32,7 @@ namespace BlazorServer.Pages
 
 
         [JSInvokable]
-        public async Task UpdateVisibility(double scrollPosition)
+        public void UpdateVisibility(double scrollPosition)
         {
             var shouldShow = scrollPosition > 100;
             if (isVisible != shouldShow)
@@ -55,6 +55,8 @@ namespace BlazorServer.Pages
 
         public Index()
         {
+
+
             SectionComponentItems.Add(new SectionComponentProjectsDto(
                 1,
                 "Frontend templates /test",
