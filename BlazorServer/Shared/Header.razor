@@ -1,0 +1,69 @@
+﻿@inject IJSRuntime JSRuntime
+@implements IDisposable
+
+<header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center">
+        <a href="/" class="logo d-flex align-items-center scrollto">
+            <img src="Pictures/elements/favicon.png" alt="">
+            <span>Home</span>
+        </a>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                @foreach (var section1 in Sections)
+                {
+                    <li><a class="nav-link scrollto @(IsActive(section1.Item2) ? "active" : "")" 
+                           @onclick="() => ScrollTo(section1.Item2)">@section1.Item1</a></li>
+                }
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle" @onclick="ToggleNavbar"></i>
+        </nav><!-- .navbar -->
+    </div>
+</header><!-- End Header -->
+
+@code {
+    private List<Tuple<string, string>> Sections = new List<Tuple<string, string>>
+    {
+        Tuple.Create("Introduction", "introduction"),
+        Tuple.Create("Frontend", "frontend"),
+        Tuple.Create("Backend", "backend"),
+        Tuple.Create("DevOps", "devops"),
+        Tuple.Create("Contact", "contact")
+    };
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("registerScrollEvent", DotNetObjectReference.Create(this));
+        }
+    }
+
+    [JSInvokable]
+    public void UpdateActiveLink()
+    {
+        // JS can pass the scroll position, and you can calculate which link should be active
+        // This method would need adjustments based on actual element positions which you can keep in a JS variable
+    }
+
+    public async Task ScrollTo(string elementId)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToElement", elementId);
+    }
+
+    public void ToggleNavbar()
+    {
+        // Code to toggle mobile nav visibility
+    }
+
+    public bool IsActive(string elementId)
+    {
+        // Logic to determine if the given section is active based on scroll
+        return false;
+    }
+
+    public void Dispose()
+    {
+        JSRuntime.InvokeVoidAsync("unregisterScrollEvent");
+    }
+}

@@ -1,0 +1,127 @@
+﻿@inherits SectionComponentBase
+
+
+<!-- ======= Frontend Section ======= -->
+@if (SectionComponentItem != null)
+{
+
+
+    <section id="frontend" class="solution">
+        <div class="container" data-aos="fade-up">
+
+            <header class="section-header">
+                <h2>@SectionComponentItem.Title</h2>
+                <p>@SectionComponentItem.Description</p>
+            </header>
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="box">
+                        <div class="slider">
+                            <div class="slides">
+                                @foreach (String item in SectionComponentItem.SliderImagesBase64Data)
+                                {
+                                    <img src="@item" class="img-fluid" alt="">
+                                }
+                            </div>
+                            <button class="arrow prev">&#10094;</button>
+                            <button class="arrow next">&#10095;</button>
+                        </div>
+                        <h3>@SectionComponentItem.ImageTitle</h3>
+                        <p>
+                            @ms
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="box">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="Pictures/projects/frontend_react_1.png" class="img-fluid" alt="">
+                                <img src="Pictures/projects/frontend_react_2.png" class="img-fluid" alt="">
+                            </div>
+                            <button class="arrow prev">&#10094;</button>
+                            <button class="arrow next">&#10095;</button>
+                        </div>
+                        <h3>AI Chat Bot made with React and Flask API</h3>
+                        <p>
+                            A Webapp where you upload documents and ask questions about them based on ChatGPT API. Check out
+                            the <a href="https://github.com/TobiasWiSoftware/AIChatPython" target="_blank">source code</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="box">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="Pictures/projects/frontend_angular_1.png" class="img-fluid" alt="">
+                                <img src="Pictures/projects/frontend_angular_2.png" class="img-fluid" alt="">
+                            </div>
+                            <button class="arrow prev">&#10094;</button>
+                            <button class="arrow next">&#10095;</button>
+                        </div>
+                        <h3>Pupil game made with Angular and Spring API</h3>
+                        <p>
+                            A simple game to upload pupils' pictures and guess their names. Check out the <a href="https://github.com/TobiasWiSoftware/PupilGuessing" target="_blank">source code</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="box">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="Pictures/projects/frontend_wpf_1.png" class="img-fluid" alt="">
+                                <img src="Pictures/projects/frontend_wpf_2.png" class="img-fluid" alt="">
+                            </div>
+                            <button class="arrow prev">&#10094;</button>
+                            <button class="arrow next">&#10095;</button>
+                        </div>
+                        <h3>E-Commerce WPF Desktop App with dotnet library</h3>
+                        <p>
+                            A simple tool for management of products incl. pictures, orders and customer logins. Check out the <a href="https://github.com/TobiasWiSoftware/WebShop" target="_blank">source code</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row gy-4 mt-2">
+                <div class="col-md-12 text-center">
+                    <div class="social-links mt-3">
+                        <a href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor" target="_blank"
+                           rel="noreferrer"><img src="Pictures/symbols/Blazor.png" alt="Blazor" width="60" height="60" /></a>
+
+                        <a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/Dotnet.png" alt="dotnet" width="60" height="60" />
+                        </a>
+
+                        <a href="https://angular.io/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/Angular.png"
+                                 alt="angular" width="60" height="60" />
+                        </a>
+
+                        <a href="https://react.dev/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/React.png"
+                                 alt="react" width="60" height="60" />
+                        </a>
+
+                        <a href="https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/?view=netdesktop-8.0"
+                           target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/Wpf.png" alt="WPF" width="60"
+                                 height="60" />
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- End Frontend Section -->
+}
