@@ -1,4 +1,5 @@
-﻿@inherits SectionComponentBase
+﻿@using BlazorServer.Components
+@inject IJSRuntime JSRuntime
 
 
 <!-- ======= Frontend Section ======= -->
@@ -25,8 +26,8 @@
                                     <img src="@item" class="img-fluid" alt="">
                                 }
                             </div>
-                            <button class="arrow prev">&#10094;</button>
-                            <button class="arrow next">&#10095;</button>
+                            <button @onclick="() => GoToPrevImage(0)" class="arrow prev">&#10094;</button>
+                            <button @onclick="() => GoToNextImage(0)" class="arrow next">&#10095;</button>
                         </div>
                         <h3>@SectionComponentItem.ImageTitle</h3>
                         <p>

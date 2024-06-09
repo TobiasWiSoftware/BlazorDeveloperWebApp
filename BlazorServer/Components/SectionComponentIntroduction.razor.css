@@ -1,0 +1,107 @@
+﻿/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.introduction {
+    width: 100%;
+    padding-bottom: unset !important;
+    padding-top: 120px;
+    height: 110vh;
+    background: url(../Pictures/elements/introduction-bg.png) top center no-repeat;
+    background-size: cover;
+}
+
+    .introduction h1 {
+        margin: 0;
+        font-size: 48px;
+        font-weight: 700;
+        color: #012970;
+    }
+
+    .introduction h2 {
+        color: #444444;
+        margin: 15px 0 0 0;
+        font-size: 26px;
+    }
+
+    .introduction .btn-get-started {
+        margin-top: 30px;
+        line-height: 0;
+        padding: 15px 40px;
+        border-radius: 4px;
+        transition: 0.5s;
+        color: #fff;
+        background: #4154f1;
+        box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+    }
+
+        .introduction .btn-get-started span {
+            font-family: "Nunito", sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 1px;
+            width: 14em;
+        }
+
+        .introduction .btn-get-started i {
+            margin-left: 5px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .introduction .btn-get-started:hover i {
+            transform: translateX(5px);
+        }
+
+    .introduction .introduction-img {
+        text-align: right;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 21em;
+        height: 70% !important;
+    }
+
+.introduction-img .img-fluid:hover {
+    transform: scale(1.15);
+    transition: 0.5s;
+}
+
+@media (min-width: 1024px) {
+    .introduction {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 991px) {
+    .introduction {
+        height: auto;
+        padding: 120px 0 60px 0;
+    }
+
+        .introduction .introduction-img {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+            .introduction .introduction-img img {
+                width: 80%;
+            }
+}
+
+@media (max-width: 768px) {
+    .introduction {
+        text-align: center;
+    }
+
+        .introduction h1 {
+            font-size: 32px;
+        }
+
+        .introduction h2 {
+            font-size: 24px;
+        }
+
+        .introduction .introduction-img img {
+            width: 100%;
+        }
+}

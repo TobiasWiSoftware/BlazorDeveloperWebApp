@@ -7,488 +7,391 @@
 <PageTitle>Index</PageTitle>
 
 
-<!-- ======= Introduction Section ======= -->
-<section id="introduction" class="introduction">
+<SectionComponentIntroduction SectionComponentItem=@new() />
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 d-flex flex-column justify-content-center">
-                <h1 data-aos="fade-up">Hi, I am Tobias and I offer modern solutions for your business.</h1>
-                <h2 data-aos="fade-up" data-aos-delay="200">
-                    I will develop and host your Full-Stack Software in C#, Java,
-                    Python, TypeScript and Docker.
-                </h2>
-                <div data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-center text-lg-start">
-                        <a href="#frontend" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                            <span>Sample Frontend solutions</span>
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="text-center text-lg-start">
-                        <a href="#backend"
-                           class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                            <span>Sample Backend solutions</span>
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="text-center text-lg-start">
-                        <a href="#devops"
-                           class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                            <span>Sample Docker solutions</span>
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 introduction-img" data-aos="zoom-out" data-aos-delay="100">
-                <img src="Pictures/elements/introduction.jpg" class="img-fluid mt-5" alt="">
-            </div>
-        </div>
-        <div class="row gy-4 mt-1">
-            <div class="col-md-12 text-center">
-                <div class="social-links">
-                    <a href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps" target="_blank" rel="noreferrer">
-                         <img src="Pictures/symbols/CSharp.png" alt="C#" width="60" height="60" />
-                    </a>
-
-                    <a href="https://www.java.com/de/" target="_blank" rel="noreferrer">
-                        <img src="Pictures/symbols/Java.png"
-                             width="60" alt="Java" height="60" />
-                    </a>
-
-                    <a href="https://www.python.org/" target="_blank" alt="Python" rel="noreferrer">
-                        <img src="Pictures/symbols/Python.png" alt="react" width="60" height="60" />
-                    </a>
-
-                    <a href="https://www.w3schools.com/js/" target="_blank" rel="noreferrer">
-                        <img src="Pictures/symbols/JavaScript.png" alt="JS" width="60" height="60" />
-                    </a>
-
-                    <a href="https://en.wikipedia.org/wiki/SQL" target="_blank" rel="noreferrer">
-                        <img src="Pictures/symbols/SQL.png" alt="react" width="60" height="60" />
-                    </a>
-
-                    <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
-                        <img src="Pictures//symbols/Bootstrap.png" alt="bootstrap" width="60" height="60" />
-                    </a>
-
-                    <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
-                        <img src="Pictures//symbols/Html.png"
-                             alt="HTML" width="60" height="60" />
-                    </a>
-
-                     <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
-                        <img src="Pictures/symbols/CSS.png" alt="CSS" width="60" height="60" />
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section><!-- End Hero -->
-
-
-<main id="main">
 
     @foreach (SectionComponentProjectsDto item in SectionComponentItems)
     {
-        <SectionComponent SectionComponentItem=item />
+        <SectionComponentProjects SectionComponentItem=item />
     }
 
 
     <!-- ======= Frontend Section ======= -->
     <section id="frontend" class="solution">
-      <div class="container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
 
-        <header class="section-header">
-          <h2>Frontend templates</h2>
-          <p>Frontend designs for excellent, modern and responsive user interfaces</p>
-        </header>
+            <header class="section-header">
+                <h2>Frontend templates</h2>
+                <p>Frontend designs for excellent, modern and responsive user interfaces</p>
+            </header>
 
-        <div class="row align-items-center">
+            <div class="row align-items-center">
 
-          <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="box">
-              <div class="slider">
-                <div class="slides">
-                  <img src="Pictures/projects/frontend_blazor.png" class="img-fluid" alt="">
-                  <img src="Pictures/projects/backend_java_1.png" class="img-fluid" alt="">
+                <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="box">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="Pictures/projects/frontend_blazor.png" class="img-fluid" alt="">
+                                <img src="Pictures/projects/backend_java_1.png" class="img-fluid" alt="">
+                            </div>
+                            <button class="arrow prev">&#10094;</button>
+                            <button class="arrow next">&#10095;</button>
+                        </div>
+                        <h3>Tax Calculator UI made with Blazor</h3>
+                        <p>
+                            A simple responsive bootstrap and css design. Check out the <a href="https://brutto-netto-steuerrechner.de" target="_blank">live version</a> and <a target="_blank"
+                                                                                                                                                                                href="https://github.com/TobiasWiSoftware/TaxCalculatorWithAPI">source code.</a>
+                        </p>
+                    </div>
                 </div>
-                <button class="arrow prev">&#10094;</button>
-                <button class="arrow next">&#10095;</button>
-              </div>
-              <h3>Tax Calculator UI made with Blazor</h3>
-              <p>A simple responsive bootstrap and css design. Check out the <a
-                  href="https://brutto-netto-steuerrechner.de" target="_blank">live version</a> and <a target="_blank"
-                  href="https://github.com/TobiasWiSoftware/TaxCalculatorWithAPI">source code.</a></p>
-            </div>
-          </div>
 
-          <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="box">
-              <div class="slider">
-                <div class="slides">
-                  <img src="Pictures/projects/frontend_react_1.png" class="img-fluid" alt="">
-                  <img src="Pictures/projects/frontend_react_2.png" class="img-fluid" alt="">
+                <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="box">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="Pictures/projects/frontend_react_1.png" class="img-fluid" alt="">
+                                <img src="Pictures/projects/frontend_react_2.png" class="img-fluid" alt="">
+                            </div>
+                            <button class="arrow prev">&#10094;</button>
+                            <button class="arrow next">&#10095;</button>
+                        </div>
+                        <h3>AI Chat Bot made with React and Flask API</h3>
+                        <p>
+                            A Webapp where you upload documents and ask questions about them based on ChatGPT API. Check out
+                            the <a href="https://github.com/TobiasWiSoftware/AIChatPython" target="_blank">source code</a>
+                        </p>
+                    </div>
                 </div>
-                <button class="arrow prev">&#10094;</button>
-                <button class="arrow next">&#10095;</button>
-              </div>
-              <h3>AI Chat Bot made with React and Flask API</h3>
-              <p>A Webapp where you upload documents and ask questions about them based on ChatGPT API. Check out
-                the <a href="https://github.com/TobiasWiSoftware/AIChatPython" target="_blank">source code</a></p>
-            </div>
-          </div>
 
-          <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="box">
-              <div class="slider">
-                <div class="slides">
-                  <img src="Pictures/projects/frontend_angular_1.png" class="img-fluid" alt="">
-                  <img src="Pictures/projects/frontend_angular_2.png" class="img-fluid" alt="">
+                <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="box">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="Pictures/projects/frontend_angular_1.png" class="img-fluid" alt="">
+                                <img src="Pictures/projects/frontend_angular_2.png" class="img-fluid" alt="">
+                            </div>
+                            <button class="arrow prev">&#10094;</button>
+                            <button class="arrow next">&#10095;</button>
+                        </div>
+                        <h3>Pupil game made with Angular and Spring API</h3>
+                        <p>
+                            A simple game to upload pupils' pictures and guess their names. Check out the <a href="https://github.com/TobiasWiSoftware/PupilGuessing" target="_blank">source code</a>
+                        </p>
+                    </div>
                 </div>
-                <button class="arrow prev">&#10094;</button>
-                <button class="arrow next">&#10095;</button>
-              </div>
-              <h3>Pupil game made with Angular and Spring API</h3>
-              <p>A simple game to upload pupils' pictures and guess their names. Check out the <a
-                  href="https://github.com/TobiasWiSoftware/PupilGuessing" target="_blank">source code</a></p>
-            </div>
-          </div>
 
-          <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="box">
-              <div class="slider">
-                <div class="slides">
-                  <img src="Pictures/projects/frontend_wpf_1.png" class="img-fluid" alt="">
-                  <img src="Pictures/projects/frontend_wpf_2.png" class="img-fluid" alt="">
+                <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="box">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="Pictures/projects/frontend_wpf_1.png" class="img-fluid" alt="">
+                                <img src="Pictures/projects/frontend_wpf_2.png" class="img-fluid" alt="">
+                            </div>
+                            <button class="arrow prev">&#10094;</button>
+                            <button class="arrow next">&#10095;</button>
+                        </div>
+                        <h3>E-Commerce WPF Desktop App with dotnet library</h3>
+                        <p>
+                            A simple tool for management of products incl. pictures, orders and customer logins. Check out the <a href="https://github.com/TobiasWiSoftware/WebShop" target="_blank">source code</a>
+                        </p>
+                    </div>
                 </div>
-                <button class="arrow prev">&#10094;</button>
-                <button class="arrow next">&#10095;</button>
-              </div>
-              <h3>E-Commerce WPF Desktop App with dotnet library</h3>
-              <p>A simple tool for management of products incl. pictures, orders and customer logins. Check out the <a
-                  href="https://github.com/TobiasWiSoftware/WebShop" target="_blank">source code</a></p>
             </div>
-          </div>
+
+
+
+            <div class="row gy-4 mt-2">
+                <div class="col-md-12 text-center">
+                    <div class="social-links mt-3">
+                        <a href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor" target="_blank"
+                           rel="noreferrer"><img src="Pictures/symbols/Blazor.png" alt="Blazor" width="60" height="60" /></a>
+
+                        <a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/Dotnet.png" alt="dotnet" width="60" height="60" />
+                        </a>
+
+                        <a href="https://angular.io/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/Angular.png"
+                                 alt="angular" width="60" height="60" />
+                        </a>
+
+                        <a href="https://react.dev/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/React.png"
+                                 alt="react" width="60" height="60" />
+                        </a>
+
+                        <a href="https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/?view=netdesktop-8.0"
+                           target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/Wpf.png" alt="WPF" width="60"
+                                 height="60" />
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-
-
-        <div class="row gy-4 mt-2">
-          <div class="col-md-12 text-center">
-            <div class="social-links mt-3">
-              <a href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor" target="_blank"
-                rel="noreferrer"><img src="Pictures/symbols/Blazor.png" alt="Blazor" width="60" height="60" /></a>
-
-              <a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer"><img
-                  src="Pictures/symbols/Dotnet.png" alt="dotnet" width="60" height="60" /></a>
-
-              <a href="https://angular.io/" target="_blank" rel="noreferrer"> <img src="Pictures/symbols/Angular.png"
-                  alt="angular" width="60" height="60" /></a>
-
-              <a href="https://react.dev/" target="_blank" rel="noreferrer"><img src="Pictures/symbols/React.png"
-                  alt="react" width="60" height="60" /></a>
-
-              <a href="https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/?view=netdesktop-8.0"
-                target="_blank" rel="noreferrer"><img src="Pictures/symbols/Wpf.png" alt="WPF" width="60"
-                  height="60" /></a>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
     </section><!-- End Frontend Section -->
-
-
     <!-- ======= Backend Section ======= -->
     <section id="backend" class="solution">
 
-      <div class="container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
 
-        <header class="section-header">
-          <h2>Backend Templates</h2>
-          <p>Backend data provided with clean code and state-of-the-art database design</p>
-        </header>
+            <header class="section-header">
+                <h2>Backend Templates</h2>
+                <p>Backend data provided with clean code and state-of-the-art database design</p>
+            </header>
 
-        <div class="row align-items-center">
+            <div class="row align-items-center">
 
-          <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="box">
-              <div class="slider">
-                <div class="slides">
-                  <img src="Pictures/projects/backend_asp_1.png" class="img-fluid" alt="">
-                  <img src="Pictures/projects/backend_asp_2.png" class="img-fluid" alt="">
+                <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="box">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="Pictures/projects/backend_asp_1.png" class="img-fluid" alt="">
+                                <img src="Pictures/projects/backend_asp_2.png" class="img-fluid" alt="">
+                            </div>
+                            <button class="arrow prev">&#10094;</button>
+                            <button class="arrow next">&#10095;</button>
+                        </div>
+                        <h3>Taxcalculator server code with ASP.Net Web API</h3>
+                        <p>
+                            A simple, clean and fast C# API with automatic JSON serializer, Identity Framework and Entity Framework
+                            with SQLite
+                        </p>
+                    </div>
                 </div>
-                <button class="arrow prev">&#10094;</button>
-                <button class="arrow next">&#10095;</button>
-              </div>
-              <h3>Taxcalculator server code with ASP.Net Web API</h3>
-              <p>A simple, clean and fast C# API with automatic JSON serializer, Identity Framework and Entity Framework
-                with SQLite</p>
-            </div>
-          </div>
 
-          <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="box">
-              <div class="slider">
-                <div class="slides">
-                  <img src="Pictures/projects/backend_python_1.png" class="img-fluid" alt="">
+                <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="box">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="Pictures/projects/backend_python_1.png" class="img-fluid" alt="">
+                            </div>
+                            <button class="arrow prev">&#10094;</button>
+                            <button class="arrow next">&#10095;</button>
+                        </div>
+                        <h3>AI Chat Bot server code with Flask</h3>
+                        <p>Python API based on simple scripting and AI library</p>
+                    </div>
                 </div>
-                <button class="arrow prev">&#10094;</button>
-                <button class="arrow next">&#10095;</button>
-              </div>
-              <h3>AI Chat Bot server code with Flask</h3>
-              <p>Python API based on simple scripting and AI library</p>
-            </div>
-          </div>
 
-          <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="box">
-              <div class="slider">
-                <div class="slides">
-                  <img src="Pictures/projects/backend_java_1.png" class="img-fluid" alt="">
-                  <img src="Pictures/projects/backend_java_2.png" class="img-fluid" alt="">
+                <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="box">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="Pictures/projects/backend_java_1.png" class="img-fluid" alt="">
+                                <img src="Pictures/projects/backend_java_2.png" class="img-fluid" alt="">
+                            </div>
+                            <button class="arrow prev">&#10094;</button>
+                            <button class="arrow next">&#10095;</button>
+                        </div>
+                        <h3>Pupil Game server code with spring boot</h3>
+                        <p>Professional Java solution with JPA and MySQL</p>
+                    </div>
                 </div>
-                <button class="arrow prev">&#10094;</button>
-                <button class="arrow next">&#10095;</button>
-              </div>
-              <h3>Pupil Game server code with spring boot</h3>
-              <p>Professional Java solution with JPA and MySQL</p>
-            </div>
-          </div>
 
-          <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="box">
-              <div class="slider">
-                <div class="slides">
-                  <img src="Pictures/projects/backend_consolegame_1.png" class="img-fluid" alt="">
-                  <img src="Pictures/projects/backend_consolegame_2.png" class="img-fluid" alt="">
+                <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="box">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="Pictures/projects/backend_consolegame_1.png" class="img-fluid" alt="">
+                                <img src="Pictures/projects/backend_consolegame_2.png" class="img-fluid" alt="">
+                            </div>
+                            <button class="arrow prev">&#10094;</button>
+                            <button class="arrow next">&#10095;</button>
+                        </div>
+                        <h3>Console Games</h3>
+                        <p>Exercises to improve my practice with algorithms and architecture</p>
+                    </div>
                 </div>
-                <button class="arrow prev">&#10094;</button>
-                <button class="arrow next">&#10095;</button>
-              </div>
-              <h3>Console Games</h3>
-              <p>Exercises to improve my practice with algorithms and architecture</p>
-            </div>
-          </div>
 
+            </div>
+
+
+
+            <div class="row gy-4 mt-2">
+                <div class="col-md-12 text-center">
+                    <div class="social-links mt-3">
+                        <a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/Dotnet.png" alt="dotnet" width="60" height="60" />
+                        </a>
+
+                        <a href="https://spring.io/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/Springboot.png"
+                                 alt="spring" width="60" height="60" />
+                        </a>
+
+                        <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/Flask.png" alt="flask" width="60" height="60" />
+                        </a>
+
+                        <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/MySql.png"
+                                 alt="mysql" width="60" height="60" />
+                        </a>
+
+                        <a href="https://www.postgresql.org" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/postgres.png" alt="postgresql" width="60" height="60" />
+                        </a>
+
+                        <a href="https://www.sqlite.org/index.html" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/SQLite.png" alt="Sqlite" width="60" height="60" />
+                        </a>
+
+                        <a href="https://en.wikipedia.org/wiki/Microsoft_SQL_Server" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/SqlServer.png" alt="Sqlite" width="60" height="60" />
+                        </a>
+
+
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-
-
-        <div class="row gy-4 mt-2">
-          <div class="col-md-12 text-center">
-            <div class="social-links mt-3">
-              <a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer"><img
-                  src="Pictures/symbols/Dotnet.png" alt="dotnet" width="60" height="60" /></a>
-
-              <a href="https://spring.io/" target="_blank" rel="noreferrer"><img src="Pictures/symbols/Springboot.png"
-                  alt="spring" width="60" height="60" /></a>
-
-              <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"><img
-                  src="Pictures/symbols/Flask.png" alt="flask" width="60" height="60" /></a>
-
-              <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="Pictures/symbols/MySql.png"
-                  alt="mysql" width="60" height="60" /></a>
-
-              <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img
-                  src="Pictures/symbols/postgres.png" alt="postgresql" width="60" height="60" /></a>
-
-              <a href="https://www.sqlite.org/index.html" target="_blank" rel="noreferrer"> <img
-                  src="Pictures/symbols/SQLite.png" alt="Sqlite" width="60" height="60" /></a>
-
-              <a href="https://en.wikipedia.org/wiki/Microsoft_SQL_Server" target="_blank" rel="noreferrer"> <img
-                  src="Pictures/symbols/SqlServer.png" alt="Sqlite" width="60" height="60" /></a>
-
-
-            </div>
-          </div>
-
-        </div>
-      </div>
     </section><!-- End Backend Section -->
-
-
     <!-- ======= DevOps Section ======= -->
     <section id="devops" class="solution">
 
-      <div class="container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
 
-        <header class="section-header">
-          <h2>DevOps and Hosting solutions</h2>
-          <p>Engineering, testing and hosting of all modern frameworks in Docker. This method is clean, reliable,
-            plattform-independent and avoids most errors in traditional server hosting</p>
-        </header>
+            <header class="section-header">
+                <h2>DevOps and Hosting solutions</h2>
+                <p>
+                    Engineering, testing and hosting of all modern frameworks in Docker. This method is clean, reliable,
+                    plattform-independent and avoids most errors in traditional server hosting
+                </p>
+            </header>
 
 
 
-        <div class="row align-items-center">
+            <div class="row align-items-center">
 
-          <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="box">
-              <div class="slider">
-                <div class="slides">
-                  <img src="Pictures/projects/devops_taxcalculator_1.png" class="img-fluid" alt="">
-                  <img src="Pictures/projects/devops_taxcalculator_2.png" class="img-fluid" alt="">
+                <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="box">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="Pictures/projects/devops_taxcalculator_1.png" class="img-fluid" alt="">
+                                <img src="Pictures/projects/devops_taxcalculator_2.png" class="img-fluid" alt="">
+                            </div>
+                            <button class="arrow prev">&#10094;</button>
+                            <button class="arrow next">&#10095;</button>
+                        </div>
+                        <h3>Tax Calculator with Client-Server-Architecture</h3>
+                        <p>Hosted on Ubuntu VPS with Docker, Docker Compose and internal network</p>
+                    </div>
                 </div>
-                <button class="arrow prev">&#10094;</button>
-                <button class="arrow next">&#10095;</button>
-              </div>
-              <h3>Tax Calculator with Client-Server-Architecture</h3>
-              <p>Hosted on Ubuntu VPS with Docker, Docker Compose and internal network</p>
+
+                <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="box">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="Pictures/projects/devops_timestamp_1.png" class="img-fluid" alt="">
+                                <img src="Pictures/projects/devops_timestamp_2.png" class="img-fluid" alt="">
+                            </div>
+                            <button class="arrow prev">&#10094;</button>
+                            <button class="arrow next">&#10095;</button>
+                        </div>
+                        <h3>TimeStamp with MVC-Architecture</h3>
+                        <p>Working on VPS and Docker Desktop with https. Importing a Postgres DB image and backup volume</p>
+                    </div>
+                </div>
+
             </div>
-          </div>
-
-          <div class="col-lg-6 mt-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="box">
-              <div class="slider">
-                <div class="slides">
-                  <img src="Pictures/projects/devops_timestamp_1.png" class="img-fluid" alt="">
-                  <img src="Pictures/projects/devops_timestamp_2.png" class="img-fluid" alt="">
-                </div>
-                <button class="arrow prev">&#10094;</button>
-                <button class="arrow next">&#10095;</button>
-              </div>
-              <h3>TimeStamp with MVC-Architecture</h3>
-              <p>Working on VPS and Docker Desktop with https. Importing a Postgres DB image and backup volume</p>
-            </div>
-          </div>
-
-        </div>
 
 
 
-        <div class="row gy-4 mt-2">
-          <div class="col-md-12 text-center">
-            <div class="social-links mt-3">
-              <a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img
-                  src="Pictures/symbols/Docker.png" alt="docker" width="60" height="60" /></a>
-
-              <a href="https://docs.docker.com/compose/" target="_blank" rel="noreferrer"><img
-                  src="Pictures/symbols/Docker-Compose.png" alt="docker-compose" width="60" height="60" /></a>
-
-
-              <a href="https://www.linux.org/" target="_blank" rel="noreferrer"><img src="Pictures/symbols/Linux.png"
-                  alt="linux" width="60" height="60" /></a>
-
-              <a href="https://microsoft.com/" target="_blank" rel="noreferrer"><img
-                  src="Pictures/symbols/Windows.png" alt="windows11" width="60" height="60" /></a>
-
-              <a href="https://visualstudio.microsoft.com/de/" target="_blank" rel="noreferrer"><img
-                  src="Pictures/symbols/VS.png" alt="VisualStudio" width="60" height="60" /></a>
-
-              <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"><img
-                  src="Pictures/symbols/VSC.png" alt="VSCode" width="60" height="60" /></a>
-
-              <a href="https://git-scm.com/" target="_blank" rel="noreferrer"><img src="Pictures/symbols/Git.png"
-                  alt="git" width="60" height="60" /></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- End DevOps Section -->
-
-
-
-
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Contact</h2>
-          <p>Contact me - <span style="color: red;">Feature not implemented at the moment</span></p>
-        </header>
-
-        <div class="row gy-4">
-          <div>
-            <EditForm Model="@EmailDto" OnValidSubmit="@TaskSendEmail" class="php-email-form">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <InputText id="name" @bind-Value="EmailDto.Name" type="text" name="name" class="form-control" placeholder="Your Name" required />
-                </div>
-
-                <div class="col-md-6 ">
-                  <InputText type="email" @bind-Value="EmailDto.Email" class="form-control" name="email" placeholder="Your Email" required/>
-                </div>
-
-                <div class="col-md-12">
-                  <InputText type="text" @bind-Value="EmailDto.Subject" class="form-control" name="subject" placeholder="Subject" required/>
-                </div>
-
-                <div class="col-md-12">
-                  <InputText @bind-Value="EmailDto.Message" class="form-control" name="message" rows="6" placeholder="Message" required/>
-                </div>
-
+            <div class="row gy-4 mt-2">
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                    <div class="social-links mt-3">
+                        <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/Docker.png" alt="docker" width="60" height="60" />
+                        </a>
 
-                  <button type="submit" >Send Message</button>
+                        <a href="https://docs.docker.com/compose/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/Docker-Compose.png" alt="docker-compose" width="60" height="60" />
+                        </a>
+
+
+                        <a href="https://www.linux.org/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/Linux.png"
+                                 alt="linux" width="60" height="60" />
+                        </a>
+
+                        <a href="https://microsoft.com/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/Windows.png" alt="windows11" width="60" height="60" />
+                        </a>
+
+                        <a href="https://visualstudio.microsoft.com/de/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/VS.png" alt="VisualStudio" width="60" height="60" />
+                        </a>
+
+                        <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/VSC.png" alt="VSCode" width="60" height="60" />
+                        </a>
+
+                        <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
+                            <img src="Pictures/symbols/Git.png"
+                                 alt="git" width="60" height="60" />
+                        </a>
+                    </div>
                 </div>
 
-              </div>
-            </EditForm>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-7 col-md-12 footer-info">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <img src="Pictures/elements/favicon.png" alt="">
-              <span>TobiasWiSoftware</span>
-            </a>
-            <p>Custom software solutions for your requirements in all common modern programming languages and
-              frameworks. DevOps and hosting with Docker on Linux VPS</p>
-            <div class="social-links mt-3">
-              <a href="https://github.com/TobiasWiSoftware" target="_blank" class="twitter"><i
-                  class="bi bi-github fs-1"></i></a>
-              <!-- <a href="#" class="facebook"><i class="bi bi-linkedin fs-1"></i></a> -->
             </div>
-          </div>
-
-
         </div>
-      </div>
+    </section><!-- End DevOps Section -->
+    <!-- ======= Contact Section ======= -->
 
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>TobiasWiSoftware</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
-          <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
-        </div>
-      </div>
-      </div>
-  </footer><!-- End Footer -->
+    <SectionComponentMap />
 
-<a @ref="backToTopButton" href="#" class="@ButtonClass back-to-top d-flex align-items-center justify-content-center" @onclick="ScrollToTop">
-    <i class="bi bi-arrow-up-short"></i>
-</a>
+    <SectionComponentContact/>
+
+   
+
+    <a @ref="backToTopButton" href="#" class="@ButtonClass back-to-top d-flex align-items-center justify-content-center" @onclick="ScrollToTop">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-7 col-md-12 footer-info">
+                        <a href="index.html" class="logo d-flex align-items-center">
+                            <img src="Pictures/elements/favicon.png" alt="">
+                            <span>TobiasWiSoftware</span>
+                        </a>
+                        <p>
+                            Custom software solutions for your requirements in all common modern programming languages and
+                            frameworks. DevOps and hosting with Docker on Linux VPS
+                        </p>
+                        <div class="social-links mt-3">
+                            <a href="https://github.com/TobiasWiSoftware" target="_blank" class="twitter">
+                                <i class="bi bi-github fs-1"></i>
+                            </a>
+                            <!-- <a href="#" class="facebook"><i class="bi bi-linkedin fs-1"></i></a> -->
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>TobiasWiSoftware</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+                    <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+                </div>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
 
 

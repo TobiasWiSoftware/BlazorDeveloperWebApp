@@ -18,7 +18,7 @@
     color: #013289;
     white-space: nowrap;
     transition: 0.3s;
-    cursor: pointer;  /* Ensures cursor changes to pointer */
+    cursor: pointer; /* Ensures cursor changes to pointer */
 }
 
 
@@ -107,6 +107,7 @@
                     .navbar .megamenu ul li .active:hover {
                         color: #4154f1;
                     }
+
 
 
 @media (max-width: 1366px) {

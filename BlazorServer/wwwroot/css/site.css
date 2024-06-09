@@ -41,7 +41,8 @@ h6 {
 # Sections
 --------------------------------------------------------------*/
 section {
-    padding: 80px 0;
+    margin-bottom: 60px;
+    padding: 70px 0 0 0;
     overflow: hidden;
 }
 
@@ -332,316 +333,8 @@ section {
 
 
 
-/* Style for the slider container */
-.slider {
-    width: 100%; /* Set slider width to fill container */
-    overflow: hidden; /* Hide anything outside the slider area */
-    position: relative; /* Needed for positioning arrows absolutely */
-}
-
-/* Style for the container that holds all slides */
-.slides {
-    display: flex; /* Align slides in a row */
-    transition: transform 0.5s ease; /* Smooth transition for sliding effect */
-    width: 100%; /* Ensure slides container fills slider */
-}
-
-/* Style for individual slides */
-.img-fluid {
-    width: 50em; /* Each image takes the full width of the slider */
-    height: 20em;
-    flex-shrink: 0; /* Prevent images from being squished */
-}
-
-/* Style for navigation arrows */
-.arrow {
-    position: absolute;
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Align arrow properly in the center */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    color: white; /* Arrow color */
-    border: none; /* Remove border */
-    cursor: pointer; /* Cursor indicates clickable area */
-    padding: 10px; /* Spacing around arrow icon */
-    z-index: 100; /* Ensure arrows are above other content */
-}
 
 
-/* Positioning the previous arrow to the left */
-.prev {
-    left: 10px; /* Position arrow from the left edge */
-}
-
-/* Positioning the next arrow to the right */
-.next {
-    right: 10px; /* Position arrow from the right edge */
-}
-
-
-
-
-
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-.introduction {
-    width: 100%;
-    padding-bottom: unset !important;
-    height: 110vh;
-    background: url(../Pictures/elements/introduction-bg.png) top center no-repeat;
-    background-size: cover;
-}
-
-    .introduction h1 {
-        margin: 0;
-        font-size: 48px;
-        font-weight: 700;
-        color: #012970;
-    }
-
-    .introduction h2 {
-        color: #444444;
-        margin: 15px 0 0 0;
-        font-size: 26px;
-    }
-
-    .introduction .btn-get-started {
-        margin-top: 30px;
-        line-height: 0;
-        padding: 15px 40px;
-        border-radius: 4px;
-        transition: 0.5s;
-        color: #fff;
-        background: #4154f1;
-        box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
-    }
-
-        .introduction .btn-get-started span {
-            font-family: "Nunito", sans-serif;
-            font-weight: 600;
-            font-size: 16px;
-            letter-spacing: 1px;
-            width: 14em;
-            ;
-        }
-
-        .introduction .btn-get-started i {
-            margin-left: 5px;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-
-        .introduction .btn-get-started:hover i {
-            transform: translateX(5px);
-        }
-
-    .introduction .introduction-img {
-        text-align: right;
-        align-items: center;
-        margin-left: auto;
-        margin-right: auto;
-        width: 21em;
-        height: 35em;
-    }
-
-.introduction-img .img-fluid:hover {
-    transform: scale(1.15);
-    transition: 0.5s;
-}
-
-@media (min-width: 1024px) {
-    .introduction {
-        background-attachment: fixed;
-    }
-}
-
-@media (max-width: 991px) {
-    .introduction {
-        height: auto;
-        padding: 120px 0 60px 0;
-    }
-
-        .introduction .introduction-img {
-            text-align: center;
-            margin-top: 80px;
-        }
-
-            .introduction .introduction-img img {
-                width: 80%;
-            }
-}
-
-@media (max-width: 768px) {
-    .introduction {
-        text-align: center;
-    }
-
-        .introduction h1 {
-            font-size: 32px;
-        }
-
-        .introduction h2 {
-            font-size: 24px;
-        }
-
-        .introduction .introduction-img img {
-            width: 100%;
-        }
-}
-
-/*--------------------------------------------------------------
-# Solution
---------------------------------------------------------------*/
-.solution .box {
-    padding: 30px;
-    box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
-    text-align: center;
-    transition: 0.3s;
-    height: 100%;
-    min-height: 32em;
-}
-
-    .solution .box img {
-        padding: 30px 50px;
-        transition: 0.5s;
-    }
-
-    .solution .box h3 {
-        font-size: 24px;
-        color: #012970;
-        font-weight: 700;
-        margin-bottom: 18px;
-    }
-
-
-    .solution .box:hover {
-        box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
-    }
-
-        .solution .box:hover img {
-            transform: scale(1.15);
-        }
-
-
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
-.contact .info-box {
-    color: #444444;
-    background: #fafbff;
-    padding: 30px;
-}
-
-    .contact .info-box i {
-        font-size: 38px;
-        line-height: 0;
-        color: #4154f1;
-    }
-
-    .contact .info-box h3 {
-        font-size: 20px;
-        color: #012970;
-        font-weight: 700;
-        margin: 20px 0 10px 0;
-    }
-
-    .contact .info-box p {
-        padding: 0;
-        line-height: 24px;
-        font-size: 14px;
-        margin-bottom: 0;
-    }
-
-.contact .php-email-form {
-    background: #fafbff;
-    padding: 30px;
-    height: 100%;
-}
-
-    .contact .php-email-form .error-message {
-        display: none;
-        color: #fff;
-        background: #ed3c0d;
-        text-align: left;
-        padding: 15px;
-        margin-bottom: 24px;
-        font-weight: 600;
-    }
-
-    .contact .php-email-form .sent-message {
-        display: none;
-        color: #fff;
-        background: #18d26e;
-        text-align: center;
-        padding: 15px;
-        margin-bottom: 24px;
-        font-weight: 600;
-    }
-
-    .contact .php-email-form .loading {
-        display: none;
-        background: #fff;
-        text-align: center;
-        padding: 15px;
-        margin-bottom: 24px;
-    }
-
-        .contact .php-email-form .loading:before {
-            content: "";
-            display: inline-block;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            margin: 0 10px -6px 0;
-            border: 3px solid #18d26e;
-            border-top-color: #eee;
-            animation: animate-loading 1s linear infinite;
-        }
-
-    .contact .php-email-form input,
-    .contact .php-email-form textarea {
-        border-radius: 0;
-        box-shadow: none;
-        font-size: 14px;
-        border-radius: 0;
-    }
-
-        .contact .php-email-form input:focus,
-        .contact .php-email-form textarea:focus {
-            border-color: #4154f1;
-        }
-
-        .contact .php-email-form input[type=text],
-        .contact .php-email-form input[type=email] {
-            padding: 10px 15px;
-        }
-
-    .contact .php-email-form textarea {
-        padding: 12px 15px;
-    }
-
-    .contact .php-email-form button[type=submit] {
-        background: #4154f1;
-        border: 0;
-        padding: 10px 30px;
-        color: #fff;
-        transition: 0.4s;
-        border-radius: 4px;
-    }
-
-        .contact .php-email-form button[type=submit]:hover {
-            background: #5969f3;
-        }
-
-@keyframes animate-loading {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
 
 /*--------------------------------------------------------------
@@ -823,3 +516,36 @@ section {
     font-size: 13px;
     color: #012970;
 }
+
+
+/*Code I removed when deleting unused*/
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+.blazor-error-boundary {
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIG92ZXJmbG93PSJoaWRkZW4iPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHg9IjIzNSIgeT0iNTEiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0OSIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzUgLTUxKSI+PHBhdGggZD0iTTI2My41MDYgNTFDMjY0LjcxNyA1MSAyNjUuODEzIDUxLjQ4MzcgMjY2LjYwNiA1Mi4yNjU4TDI2Ny4wNTIgNTIuNzk4NyAyNjcuNTM5IDUzLjYyODMgMjkwLjE4NSA5Mi4xODMxIDI5MC41NDUgOTIuNzk1IDI5MC42NTYgOTIuOTk2QzI5MC44NzcgOTMuNTEzIDI5MSA5NC4wODE1IDI5MSA5NC42NzgyIDI5MSA5Ny4wNjUxIDI4OS4wMzggOTkgMjg2LjYxNyA5OUwyNDAuMzgzIDk5QzIzNy45NjMgOTkgMjM2IDk3LjA2NTEgMjM2IDk0LjY3ODIgMjM2IDk0LjM3OTkgMjM2LjAzMSA5NC4wODg2IDIzNi4wODkgOTMuODA3MkwyMzYuMzM4IDkzLjAxNjIgMjM2Ljg1OCA5Mi4xMzE0IDI1OS40NzMgNTMuNjI5NCAyNTkuOTYxIDUyLjc5ODUgMjYwLjQwNyA1Mi4yNjU4QzI2MS4yIDUxLjQ4MzcgMjYyLjI5NiA1MSAyNjMuNTA2IDUxWk0yNjMuNTg2IDY2LjAxODNDMjYwLjczNyA2Ni4wMTgzIDI1OS4zMTMgNjcuMTI0NSAyNTkuMzEzIDY5LjMzNyAyNTkuMzEzIDY5LjYxMDIgMjU5LjMzMiA2OS44NjA4IDI1OS4zNzEgNzAuMDg4N0wyNjEuNzk1IDg0LjAxNjEgMjY1LjM4IDg0LjAxNjEgMjY3LjgyMSA2OS43NDc1QzI2Ny44NiA2OS43MzA5IDI2Ny44NzkgNjkuNTg3NyAyNjcuODc5IDY5LjMxNzkgMjY3Ljg3OSA2Ny4xMTgyIDI2Ni40NDggNjYuMDE4MyAyNjMuNTg2IDY2LjAxODNaTTI2My41NzYgODYuMDU0N0MyNjEuMDQ5IDg2LjA1NDcgMjU5Ljc4NiA4Ny4zMDA1IDI1OS43ODYgODkuNzkyMSAyNTkuNzg2IDkyLjI4MzcgMjYxLjA0OSA5My41Mjk1IDI2My41NzYgOTMuNTI5NSAyNjYuMTE2IDkzLjUyOTUgMjY3LjM4NyA5Mi4yODM3IDI2Ny4zODcgODkuNzkyMSAyNjcuMzg3IDg3LjMwMDUgMjY2LjExNiA4Ni4wNTQ3IDI2My41NzYgODYuMDU0N1oiIGZpbGw9IiNGRkU1MDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvZz48L3N2Zz4=) no-repeat 1rem/1.8rem, #b32121;
+    padding: 1rem 1rem 1rem 3.7rem;
+    color: white;
+}
+
+    .blazor-error-boundary::after {
+        content: "An error has occurred."
+    }
+

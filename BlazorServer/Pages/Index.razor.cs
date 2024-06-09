@@ -4,6 +4,7 @@ using SendGrid;
 using SendGrid.Helpers.Mail;
 using SharedLibrary.Dtos;
 using System;
+using Microsoft.AspNetCore.Components.Web;
 
 
 
@@ -13,7 +14,8 @@ namespace BlazorServer.Pages
     {
         public List<SectionComponentProjectsDto> SectionComponentItems { get; set; } = new();
 
-        public EmailDto EmailDto { get; set; } = new();
+      
+
 
         private ElementReference backToTopButton;
         private string ButtonClass => isVisible ? "active" : "";
@@ -26,6 +28,8 @@ namespace BlazorServer.Pages
             if (firstRender)
             {
                 await JSRuntime.InvokeVoidAsync("Blazor.registerBackToTop", DotNetObjectReference.Create(this));
+                await JSRuntime.InvokeVoidAsync("Blazor.aos_init", DotNetObjectReference.Create(this));
+
             }
         }
 
@@ -41,6 +45,9 @@ namespace BlazorServer.Pages
                 StateHasChanged();
             }
         }
+
+  
+
 
         public async Task ScrollToTop()
         {
@@ -73,26 +80,10 @@ namespace BlazorServer.Pages
 
         }
 
-     
 
 
-        public async Task TaskSendEmail()
-        {
-            try
-            {
-                var Client = new SendGridClient("CQCOqyTHFi171tD13ertHi5l8ffMBoFX");
-                var to = new EmailAddress("tobiaswisoftware@gmail.com");
-                var from = new EmailAddress(EmailDto.Email, EmailDto.Name);
-                var msg = MailHelper.CreateSingleEmail(from, to, EmailDto.Subject, EmailDto.Message, EmailDto.Message);
-                var response = await Client.SendEmailAsync(msg);
-
-            }
-            catch (Exception ex)
-            {
-                await Console.Out.WriteLineAsync(ex.Message);
-            }
 
 
-        }
     }
 }
+
