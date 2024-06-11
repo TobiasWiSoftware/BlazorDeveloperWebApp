@@ -5,6 +5,14 @@
 * Desktop Navigation 
 */
 
+@media(max-width: 1200px) {
+    .navbar .mobile-nav-toggle[b-4slsgrgdmi] {
+        font-size: 40px; /* Größeres Icon */
+        margin-left: 12px; /* Mehr Abstand zur linken Seite */
+        display: block; /* Stelle sicher, dass es angezeigt wird */
+    }
+}
+
 
 .navbar a,
 .navbar a:focus {

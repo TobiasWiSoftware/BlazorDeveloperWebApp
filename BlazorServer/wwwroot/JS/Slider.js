@@ -1,80 +1,31 @@
-﻿//document.addEventListener('DOMContentLoaded', function () {
-//    const sliderContainers = document.querySelectorAll(".slider");
+﻿console.log("Starting slider.js");
 
-//    sliderContainers.forEach(slider => {
-//        const slides = slider.querySelectorAll(".img-fluid");
-//        const totalSlides = slides.length;
-//        let currentIndex = 0;
-
-//        function updateSlider() {
-//            const newTransform = `translateX(-${currentIndex * 100}%)`;
-//            slider.querySelector(".slides").style.transform = newTransform;
-//        }
-
-//        slider.querySelector(".prev").addEventListener("click", function () {
-//            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-//            updateSlider();
-//        });
-
-//        slider.querySelector(".next").addEventListener("click", function () {
-//            currentIndex = (currentIndex + 1) % totalSlides;
-//            updateSlider();
-//        });
-//    });
-//});
 
 window.Blazor = window.Blazor || {};
-
-window.Blazor.initializeSlider = function () {
-    window.Blazor.sliders = [];  // Sicherstellen, dass sliders hier initialisiert wird.
+window.Blazor.init_slider =  function () {
     const sliderContainers = document.querySelectorAll(".slider");
+    console.log("Start init slider");
 
-    console.log("Slider initialization started.");
-
-    sliderContainers.forEach((slider, index) => {
-        let currentIndex = 0;
+    sliderContainers.forEach(slider => {
         const slides = slider.querySelectorAll(".img-fluid");
         const totalSlides = slides.length;
+        let currentIndex = 0;
 
-        window.Blazor.sliders[index] = {
-            nextImage: function () {
-                currentIndex = (currentIndex + 1) % totalSlides;
-                updateSlider(slider, currentIndex);
-            },
-            prevImage: function () {
-                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-                updateSlider(slider, currentIndex);
-            }
-        };
-
-        function updateSlider(slider, index) {
-            const newTransform = `translateX(-${index * 100}%)`;
+        function updateSlider() {
+            const newTransform = `translateX(-${currentIndex * 50}%)`;
             slider.querySelector(".slides").style.transform = newTransform;
         }
+
+        slider.querySelector(".prev").addEventListener("click", function () {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+
+        slider.querySelector(".next").addEventListener("click", function () {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider();
+        });
     });
-
-    console.log("Sliders initialized:", window.Blazor.sliders);
+    console.log("000 finish");
 };
-
-window.Blazor.nextImage = function (index) {
-    const slider = window.Blazor.sliders[index];
-    if (!slider) {
-        console.error("Slider with index", index, "not found.");
-        return;
-    }
-    slider.currentIndex = (slider.currentIndex + 1) % slider.totalSlides;
-    slider.updateSlider();
-};
-
-window.Blazor.prevImage = function (index) {
-    const slider = window.Blazor.sliders[index];
-    if (!slider) {
-        console.error("Slider with index", index, "not found.");
-        return;
-    }
-    slider.currentIndex = (slider.currentIndex - 1 + slider.totalSlides) % slider.totalSlides;
-    slider.updateSlider();
-};
-
-
 

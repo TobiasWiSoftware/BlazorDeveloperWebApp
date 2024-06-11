@@ -1,0 +1,14 @@
+﻿@using BlazorServer.Components
+@using SharedLibrary.Dtos
+@inject IJSRuntime JSRuntime
+@using Microsoft.AspNetCore.Components;
+
+
+
+
+<a @ref="backToTopButton"  class="@ButtonClass back-to-top d-flex align-items-center justify-content-center" @onclick="ScrollToTop">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+
+

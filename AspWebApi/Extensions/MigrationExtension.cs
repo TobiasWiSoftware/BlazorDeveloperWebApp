@@ -9,10 +9,22 @@ namespace ASPWebAPI.Extensions
     {
         public static void ApplyMigration(this IApplicationBuilder app)
         {
+            Console.WriteLine(app);
             using IServiceScope scope = app.ApplicationServices.CreateScope();
             using DataBaseContext dbContext = scope.ServiceProvider.GetRequiredService<DataBaseContext>();
             string connectionString = dbContext.Database.GetDbConnection().ConnectionString;
+            Console.WriteLine("!!!!" + connectionString + "!!!!!");
+
+            // Check if the database exists
+            var dbExists = dbContext.Database.CanConnect();
+
+            // Database should be automatically created at this point
+
+
+            // Apply any pending migrations
             dbContext.Database.Migrate();
+            Console.WriteLine("Database successfully updated with Migrate.");
+
             SeedData(app).Wait();
         }
 
@@ -33,7 +45,8 @@ namespace ASPWebAPI.Extensions
                     PasswordHasher<UserEntity> passwordHasher = new PasswordHasher<UserEntity>();
                     UserEntity user = new UserEntity
                     {
-                        UserName = defaultEmail,
+                        Email = defaultEmail,
+                        UserName = "DefaultAdmin"
                     };
 
                     var result = await userManager.CreateAsync(user, defaultPassword);

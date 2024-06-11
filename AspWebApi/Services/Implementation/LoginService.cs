@@ -14,7 +14,7 @@ namespace ASPWebAPI.Services.Implementation
     {
         private readonly ILoginRepo _loginRepo;
         private readonly ITokenService _tokenService;
-        
+
         public LoginService(ILoginRepo loginRepo, ITokenService tokenService)
         {
             _loginRepo = loginRepo;
@@ -23,13 +23,21 @@ namespace ASPWebAPI.Services.Implementation
 
         public async Task<LoginResponseDto> LoginAsync(LoginRequest loginRequest)
         {
-            SignInResult result = await _loginRepo.LoginAsync(loginRequest);
-            if (result == SignInResult.Success)
+            UserEntity? userToCheck = await _loginRepo.GetUserByEmailAsync(loginRequest.Email);
+
+            if (userToCheck != null)
             {
-                string token = _tokenService.GenerateToken(loginRequest);
-                return new LoginResponseDto(loginRequest.Email, token);
+                string? token = _tokenService.GenerateToken(loginRequest);
+                if (token != null)
+                {
+                    return new LoginResponseDto(loginRequest.Email, token);
+                }
+                throw new Exception("Token generation failed");
             }
-            throw new Exception("Login failed");    
+            else
+            {
+                throw new Exception("User not found");
+            }
         }
     }
 }

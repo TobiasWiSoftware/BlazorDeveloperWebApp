@@ -1,5 +1,4 @@
-﻿@inject IJSRuntime JSRuntime
-@implements IDisposable
+﻿@inherits LayoutComponentBase
 
 <header id="header" class="header fixed-top header-scrolled">
     <div class="container-fluid container-xl d-flex align-items-center">
@@ -8,38 +7,22 @@
             <span>Home</span>
         </a>
 
-        <nav id="navbar" class="navbar @(isExpanded ? "navbar-mobile" : "") )">
+        <nav id="navbar" class="navbar mt-2 @(isExpanded ? "navbar-mobile" : "") )">
             <ul>
-                @foreach (var section1 in Sections)
-                {
-                    <li><a class="nav-link scrollto" @onclick="() => OnClickNavLink(section1.Item2)">@section1.Item1</a></li>
-                }
+                <li><a class="nav-link" @onclick="CloseNavBar" href="/">Vorstellung</a></li>
+                <li><a class="nav-link" @onclick="CloseNavBar" href="/Leistungen">Leistungen</a></li>
+                <li><a class="nav-link" @onclick="CloseNavBar" href="/Aktuelles">Aktuelles</a></li>
+                <li><a class="nav-link" @onclick="CloseNavBar" href="/Dokumente">Dokumente</a></li>
+                <li><a class="nav-link" @onclick="CloseNavBar" href="/Anfahrt">Anfahrt</a></li>
+                <li><a class="nav-link" @onclick="CloseNavBar" href="/Kontakt">Kontakt</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle" @onclick="ToggleNavbar"></i>
         </nav><!-- .navbar -->
     </div>
 </header><!-- End Header -->
 @code {
-    private List<Tuple<string, string>> Sections = new List<Tuple<string, string>>
-    {
-        Tuple.Create("Introduction", "introduction"),
-        Tuple.Create("Frontend", "frontend"),
-        Tuple.Create("Backend", "backend"),
-        Tuple.Create("DevOps", "devops"),
-        Tuple.Create("Contact", "contact")
-    };
 
     private bool isExpanded = false;
-
-
-    public async Task OnClickNavLink(string elementId)
-    {
-        if (isExpanded)
-        {
-            ToggleNavbar();
-        }
-        await JSRuntime.InvokeVoidAsync("scrollToElement", elementId);
-    }
 
 
     public void ToggleNavbar()
@@ -47,8 +30,12 @@
         isExpanded = !isExpanded;
     }
 
-    public void Dispose()
+    public void CloseNavBar()
     {
-        JSRuntime.InvokeVoidAsync("unregisterScrollEvent");
+        if (isExpanded)
+        {
+            isExpanded = false;
+        }
     }
+
 }

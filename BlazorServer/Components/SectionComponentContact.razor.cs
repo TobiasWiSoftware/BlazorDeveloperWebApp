@@ -12,19 +12,14 @@ namespace BlazorServer.Components
         {
             try
             {
-                //var Client = new SendGridClient("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");
-                //var to = new EmailAddress("tobiaswisoftware@gmail.com");
-                //var from = new EmailAddress(EmailDto.Email, EmailDto.Name);
-                //var msg = MailHelper.CreateSingleEmail(from, to, EmailDto.Subject, EmailDto.Message, EmailDto.Message);
-                //var response = await Client.SendEmailAsync(msg);
 
                 //var apiKey = Environment.GetEnvironmentVariable("nSG.HuWqOKwHT2OMuJsd75nqMQ.w7rlwNQzIB-F1hWOoWx17ozZ1Q9GAgH74IZmdvPrl30");
                 var client = new SendGridClient("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");
-                var from = new EmailAddress("tobiaswisoftware@gmail.com", "Example User");
-                var subject = "Sending with SendGrid is Fun";
-                var to = new EmailAddress("tobiaswisoftware@gmail.com", "Example User");
-                var plainTextContent = "and easy to do anywhere, even with C#";
-                var htmlContent = "<strong>and easy to do anywhere, even with C#</strong>";
+                var from = new EmailAddress("tobiaswisoftware@gmail.com", "Kontaktformular");
+                var subject = EmailDto.Subject;
+                var to = new EmailAddress("tobiaswisoftware@gmail.com", "x");
+                var plainTextContent = EmailDto.Message;
+                var htmlContent = EmailDto.Message + "<br>" + "<br>" + "Absender: " + EmailDto.Email;
                 var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
                 var response = await client.SendEmailAsync(msg);
                 Console.WriteLine(response.StatusCode);

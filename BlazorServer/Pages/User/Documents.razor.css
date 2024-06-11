@@ -2,12 +2,12 @@
 # Solution
 --------------------------------------------------------------*/
 .solution .box {
-    padding: 1em;
+    padding: 30px;
     box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
     text-align: center;
     transition: 0.3s;
     height: 100%;
-    min-height: 34em;
+    min-height: 32em;
 }
 
     .solution .box img {
@@ -60,39 +60,39 @@
     position: relative; /* Needed for positioning arrows absolutely */
 }
 
-    /* Style for the container that holds all slides */
-    .slides {
-        display: flex; /* Align slides in a row */
-        transition: transform 0.5s ease; /* Smooth transition for sliding effect */
-        width: 195%; /* Ensure slides container fills slider */
-    }
+/* Style for the container that holds all slides */
+.slides {
+    display: flex; /* Align slides in a row */
+    transition: transform 0.5s ease; /* Smooth transition for sliding effect */
+    width: 195%; /* Ensure slides container fills slider */
+}
 
-    /* Style for individual slides */
-    .img-fluid {
-        width: 98% !important; /* Each image takes the full width of the slider */
-        object-fit: scale-down !important;
-    }
+/* Style for individual slides */
+.img-fluid {
+    width: 98% !important; /* Each image takes the full width of the slider */
+    object-fit: scale-down !important;
+}
 
-    /* Style for navigation arrows */
-    .arrow {
-        position: absolute;
-        top: 50%; /* Center vertically */
-        transform: translateY(-50%); /* Align arrow properly in the center */
-        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-        color: white; /* Arrow color */
-        border: none; /* Remove border */
-        cursor: pointer; /* Cursor indicates clickable area */
-        padding: 10px; /* Spacing around arrow icon */
-        z-index: 100; /* Ensure arrows are above other content */
-    }
+/* Style for navigation arrows */
+.arrow {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Align arrow properly in the center */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white; /* Arrow color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Cursor indicates clickable area */
+    padding: 10px; /* Spacing around arrow icon */
+    z-index: 100; /* Ensure arrows are above other content */
+}
 
 
-    /* Positioning the previous arrow to the left */
-    .prev {
-        left: 10px; /* Position arrow from the left edge */
-    }
+/* Positioning the previous arrow to the left */
+.prev {
+    left: 10px; /* Position arrow from the left edge */
+}
 
-    /* Positioning the next arrow to the right */
-    .next {
-        right: 10px; /* Position arrow from the right edge */
-    }
+/* Positioning the next arrow to the right */
+.next {
+    right: 10px; /* Position arrow from the right edge */
+}

@@ -7,6 +7,6 @@ namespace ASPWebAPI.Repositories.Interface
 {
     public interface ILoginRepo
     {
-        Task<SignInResult> LoginAsync(LoginRequest request);
+        Task<UserEntity?> GetUserByEmailAsync(string email);
     }
 }

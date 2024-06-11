@@ -9,31 +9,21 @@ namespace ASPWebAPI.Repositories.Implementation
     public class LoginRepo : ILoginRepo
     {
         private readonly UserManager<UserEntity> _userManager;
-       
+
         public LoginRepo(UserManager<UserEntity> userManager)
         {
             _userManager = userManager;
         }
 
-        public async Task<SignInResult> LoginAsync(LoginRequest request)
+
+        public async Task<UserEntity?> GetUserByEmailAsync(string email)
         {
-            // Name == Email !
-            UserEntity? correctUser = await _userManager.FindByNameAsync(request.Email);
-            if (correctUser != null)
+            if (_userManager != null)
             {
-                bool loginOk = await _userManager.CheckPasswordAsync(correctUser, request.Password);
-                if (loginOk)
-                {
-                    return SignInResult.Success;
-                }
+                return await _userManager.FindByEmailAsync(email);
             }
-            return SignInResult.Failed;
+            throw new ArgumentNullException("UserManager is null");
         }
-
-
-
-
-
 
 
     }

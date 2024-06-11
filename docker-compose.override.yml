@@ -1,0 +1,54 @@
+services:
+  aspwebapi:
+    image: ${DOCKER_REGISTRY-}aspwebapi
+    restart: unless-stopped
+    build:
+        context: .
+        dockerfile: AspWebApi/Dockerfile
+    ports:
+        - "43721:43721"
+    depends_on:
+      - db
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Docker
+        - ASPNETCORE_URLS=http://+:43721
+    networks:
+        - appnetwork
+
+
+  blazorserver:
+    image: ${DOCKER_REGISTRY-}blazorserver
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: BlazorServer/Dockerfile
+    ports:
+      - "80:80" 
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - API_URL=http://taxcalculatorapi:43721
+      - ASPNETCORE_URLS=http://+80
+    networks:
+      - appnetwork
+
+
+  db:
+    container_name: db
+    image: mysql
+    restart: unless-stopped
+    ports:
+        - "3306:3306"
+    environment:
+        MYSQL_ROOT_PASSWORD: example
+    volumes:
+        - db_data_blazordeveloperwebapp:/var/lib/mysql
+    networks:
+        - appnetwork
+  
+ 
+volumes:
+  db_data_blazordeveloperwebapp:
+
+networks:
+  appnetwork:
+

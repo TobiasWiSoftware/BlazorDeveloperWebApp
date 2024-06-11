@@ -1,5 +1,7 @@
+
 // With JSRuntime injection
 window.Blazor = window.Blazor || {};
+
 
 // very importent - controlles all elements fade in / injected by JSRuntime
 window.Blazor.aos_init = function () {
@@ -51,11 +53,19 @@ function unregisterScrollEvent(dotNetReference) {
 
 
 function scrollToElement(elementId) {
+    // Find the element by its ID.
     const element = document.getElementById(elementId);
-    const headerOffset = 70; // Adjust based on your header's height
+
+    // Define the offset from the top of the document. Adjust this value to account
+    // for any fixed header or other elements that may obscure the view.
+    const headerOffset = 70; // Height of the header, or any fixed top elements.
+
+    // Calculate the position of the element relative to the viewport's top,
+    // then adjust it by the current scroll position of the window minus the header offset.
     const elementPosition = element.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
+    // Use the scrollTo function with smooth behavior to scroll to the calculated position.
     window.scrollTo({
         top: offsetPosition,
         behavior: "smooth"

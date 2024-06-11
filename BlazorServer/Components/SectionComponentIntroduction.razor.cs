@@ -9,6 +9,13 @@ namespace BlazorServer.Components
 
         public SectionComponentIntroductionDto? SectionComponentItem { get; set; }
 
+        // Constructor
+
+        public SectionComponentIntroduction()
+        {
+            SectionComponentItem = new SectionComponentIntroductionDto();
+        }
+
 
 
 

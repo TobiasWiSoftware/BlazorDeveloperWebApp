@@ -1,0 +1,10 @@
+﻿@page "/Leistungen"
+@using BlazorServer.Components
+@using SharedLibrary.Dtos
+@inject IJSRuntime JSRuntime
+
+
+    @foreach (SectionComponentProjectsDto item in SectionComponentItems)
+    {
+        <SectionComponentProjects SectionComponentItem=item />
+    }
