@@ -17,12 +17,21 @@ namespace BlazorServer.Components
         }
 
 
-        protected override async Task OnAfterRenderAsync(bool firstRender)
+        public void NextImage(SectionComponentProjectDto item)
         {
-            if (firstRender)
+            if (item != null && item.ImageOnDisplayIndex + 1 < item.SliderImagesBase64Data.Count)
             {
-                await JSRuntime.InvokeVoidAsync("Blazor.init_slider");
+                item.ImageOnDisplayIndex++;
             }
+        }
+
+        public void PrevImage(SectionComponentProjectDto item)
+        {
+            if (item != null && item.ImageOnDisplayIndex  > 0)
+            {
+                item.ImageOnDisplayIndex--;
+            }
+
         }
 
 

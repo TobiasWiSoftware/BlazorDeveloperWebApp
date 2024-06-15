@@ -10,6 +10,9 @@
 # General
 --------------------------------------------------------------*/
 
+img{
+    border-radius: 12px;
+}
 
 
 
@@ -26,7 +29,7 @@ body {
 
 a {
     color: #4154f1;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
     a:hover {
@@ -47,9 +50,9 @@ h6 {
 # Sections
 --------------------------------------------------------------*/
 section {
-    margin-top: 6em;
-    padding: 3em 0 0 0;
+    padding-top: 8em;
     overflow: hidden;
+    padding-bottom: 4em;
 }
 
 .section-header {
@@ -82,46 +85,13 @@ section {
     }
 
     section {
-        margin-top: 3em;
-        padding: 3em 0 0 0;
+        padding-bottom: 2em;
         overflow: hidden;
     }
 }
 
 
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
-.back-to-top {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 1.8rem;
-    bottom: 1.8rem;
-    z-index: 99999;
-    background: #4154f1;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 4px;
-    transition: all 0.4s;
-}
 
-    .back-to-top i {
-        font-size: 40px;
-        font-weight: bold;
-        color: #fff;
-        line-height: 0;
-    }
-
-    .back-to-top:hover {
-        background: #6776f4;
-        color: #fff;
-    }
-
-    .back-to-top.active {
-        visibility: visible;
-        opacity: 1;
-    }
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -365,8 +335,8 @@ section {
         border-top: 1px solid #e1ecff;
     }
 
-        .footer .footer-newsletter h4 {
-            font-size: 24px;
+        h4 {
+            font-size: 18px;
             margin: 0 0 10px 0;
             padding: 0;
             line-height: 1;
@@ -409,7 +379,7 @@ section {
                     background: #5969f3;
                 }
 
-    .footer .footer-top {
+    .footer  {
         background: white url(../Pictures/elements/footer-bg.png) no-repeat right top;
         background-size: contain;
         border-top: 1px solid #e1ecff;
@@ -417,9 +387,11 @@ section {
         padding: 60px 0 30px 0;
     }
 
-@media (max-width: 992px) {
-    .footer .footer-top {
+@media (max-width: 428px) {
+    .footer {
         background-position: center bottom;
+        background-size: cover;
+        padding: 30px 0 10px 0;
     }
 }
 
@@ -519,7 +491,6 @@ section {
 
 .footer .copyright {
     text-align: center;
-    padding-top: 30px;
     color: #012970;
 }
 

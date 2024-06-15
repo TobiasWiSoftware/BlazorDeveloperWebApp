@@ -14,7 +14,7 @@ namespace BlazorServer.Pages.User
                    new List<SectionComponentProjectDto> {
                 new SectionComponentProjectDto(
                     title: "Tax Calculator UI entwickelt mit Blazor",
-                    description: @"Ein einfaches responsives Bootstrap- und CSS-Design. Schauen Sie sich die <a href='https://brutto-netto-steuerrechner.de' target='_blank'>Live-Version</a> und den <a href='https://github.com/TobiasWiSoftware/TaxCalculatorWithAPI' target=""_blank"">Quellcode.</a>",
+                    description: @"Ein einfaches responsives Bootstrap- und CSS-Design. Schauen Sie sich die <a href='https://taxcal.tobias-wi-software.com' target='_blank'>Live-Version</a> und den <a href='https://github.com/TobiasWiSoftware/TaxCalculatorWithAPI' target=""_blank"">Quellcode.</a>",
                     sliderImagesBase64Data: new List<string> { "Pictures/projects/frontend_blazor.png", "Pictures/projects/backend_java_1.png" }
                 ),
                 new(
@@ -35,13 +35,14 @@ namespace BlazorServer.Pages.User
 
                    },
 
-                   new List<SectionComponentIconDto> {
-                new(iconsBase64Data: "Pictures/symbols/Blazor.png", linkData: "https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor"),
-                new(iconsBase64Data: "Pictures/symbols/Dotnet.png", linkData: "https://dotnet.microsoft.com/"),
-                new(iconsBase64Data: "Pictures/symbols/Angular.png", linkData: "https://angular.io/"),
-                new(iconsBase64Data: "Pictures/symbols/React.png", linkData: "https://react.dev/"),
-                new(iconsBase64Data: "Pictures/symbols/Wpf.png", linkData: "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/?view=netdesktop-8.0")
-                   }
+                new List<SectionComponentIconDto> {
+                    new(iconsBase64Data: "Pictures/symbols/Blazor.png", linkData: "https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor"),
+                    new(iconsBase64Data: "Pictures/symbols/Dotnet.png", linkData: "https://dotnet.microsoft.com/"),
+                    new(iconsBase64Data: "Pictures/symbols/Angular.png", linkData: "https://angular.io/"),
+                    new(iconsBase64Data: "Pictures/symbols/React.png", linkData: "https://react.dev/"),
+                    new(iconsBase64Data: "Pictures/symbols/Wpf.png", linkData: "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/?view=netdesktop-8.0")
+                   },
+                "frontend"
                    ));
 
 
@@ -77,8 +78,10 @@ namespace BlazorServer.Pages.User
                 new(iconsBase64Data: "Pictures/symbols/MySql.png", linkData: "https://www.mysql.com/"),
                 new(iconsBase64Data: "Pictures/symbols/Postgres.png", linkData: "https://www.postgresql.org"),
                 new(iconsBase64Data: "Pictures/symbols/SQLite.png", linkData: "https://www.sqlite.org/index.html"),
-                new(iconsBase64Data: "Pictures/symbols/SqlServer.png", linkData: "https://en.wikipedia.org/wiki/Microsoft_SQL_Server")
-             }
+                new(iconsBase64Data: "Pictures/symbols/SqlServer.png", linkData: "https://en.wikipedia.org/wiki/Microsoft_SQL_Server"),
+                new(iconsBase64Data: "Pictures/symbols/AwsLamda", linkData: "https://aws.amazon.com/de/lambda/"),
+             },
+            "backend"
             ));
 
             SectionComponentItems.Add(new SectionComponentProjectsDto(
@@ -105,8 +108,12 @@ namespace BlazorServer.Pages.User
         new(iconsBase64Data: "Pictures/symbols/VS.png", linkData: "https://visualstudio.microsoft.com/de/"),
         new(iconsBase64Data: "Pictures/symbols/VSC.png", linkData: "https://code.visualstudio.com/"),
         new(iconsBase64Data: "Pictures/symbols/Git.png", linkData: "https://git-scm.com/")
-    }
-));
+    },
+    "devops"
+        ));
+
+
+
 
 
         }

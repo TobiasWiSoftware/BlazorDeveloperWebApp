@@ -1,0 +1,16 @@
+﻿<nav id="navbar" class="navbar d-flex-row mt-2 @(isExpanded ? "navbar-mobile" : "")">
+    <div>
+        <ul>
+            <li><a class="nav-link" @onclick="CloseNavBar" href="/">Vorstellung</a></li>
+            <li><a class="nav-link" @onclick="CloseNavBar" href="/Leistungen">Leistungen</a></li>
+            <li><a class="nav-link" @onclick="CloseNavBar" href="/Aktuelles">Aktuelles</a></li>
+            <li><a class="nav-link" @onclick="CloseNavBar" href="/Dokumente">Dokumente</a></li>
+            <li><a class="nav-link" @onclick="CloseNavBar" href="/Anfahrt">Anfahrt</a></li>
+            <li><a class="nav-link" @onclick="CloseNavBar" href="/Kontakt">Kontakt</a></li>
+            <li><a class="nav-link" @onclick="CloseNavBar" href="/Impressum">Impressum</a></li>
+        </ul>
+    </div>
+    <div class="mydiv">
+        <i class="bi bi-list mobile-nav-toggle" @onclick="ToggleNavbar"></i>
+    </div>
+</nav><!-- .navbar -->

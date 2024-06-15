@@ -14,6 +14,8 @@ namespace SharedLibrary.Dtos
 
         public List<String> SliderImagesBase64Data { get; set; }
 
+        public int ImageOnDisplayIndex { get; set; }
+
 
 
         public SectionComponentProjectDto(string title, string description, List<string> sliderImagesBase64Data)
@@ -21,6 +23,7 @@ namespace SharedLibrary.Dtos
             Title = title;
             Description = description;
             SliderImagesBase64Data = sliderImagesBase64Data;
+            ImageOnDisplayIndex = 0;
         }
 
 

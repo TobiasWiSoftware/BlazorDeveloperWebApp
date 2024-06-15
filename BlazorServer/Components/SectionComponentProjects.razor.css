@@ -2,16 +2,13 @@
 # Solution
 --------------------------------------------------------------*/
 .solution .box {
-    padding: 1em;
     box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
     text-align: center;
     transition: 0.3s;
-    height: 100%;
-    min-height: 34em;
+    min-height: 32em;
 }
 
     .solution .box img {
-        padding: 30px 50px;
         transition: 0.5s;
     }
 
@@ -28,13 +25,26 @@
     }
 
         .solution .box:hover img {
-            transform: scale(1.15);
+            transform: scale(1.25);
         }
 
 @media (max-width: 768px) {
     .solution .box {
         min-height: unset;
     }
+
+    .slider {
+        height: unset !important;
+        width: unset !important;  
+        min-height: 18em;
+    }
+}
+
+.my-img{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 80%;
+    height: 85%;
 }
 
 
@@ -42,7 +52,6 @@
 .container.aos-init.aos-animate.icons {
     box-shadow: 0px 0px 5px rgba(1, 41, 112, 0.08) !important;
     height: 100% !important;
-    margin-bottom: 1em;
     margin-top: 1em;
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -55,21 +64,17 @@
 
 /* Style for the slider container */
 .slider {
-    width: 95%; /* Set slider width to fill container */
+    height: 22em;
+    width: 36em;/* Set slider width to fill container */
     overflow: hidden; /* Hide anything outside the slider area */
-    position: relative; /* Needed for positioning arrows absolutely */
+    position: relative; /* Needed for positioni ng arrows absolutely */
+    margin: auto; /*Center the slider*/
 }
 
-    /* Style for the container that holds all slides */
-    .slides {
-        display: flex; /* Align slides in a row */
-        transition: transform 0.5s ease; /* Smooth transition for sliding effect */
-        width: 195%; /* Ensure slides container fills slider */
-    }
 
     /* Style for individual slides */
     .img-fluid {
-        width: 98% !important; /* Each image takes the full width of the slider */
+        width: 100% !important; /* Each image takes the full width of the slider */
         object-fit: scale-down !important;
     }
 

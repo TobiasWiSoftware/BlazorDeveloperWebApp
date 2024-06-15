@@ -12,6 +12,7 @@ namespace SharedLibrary.Dtos
         public string? Email { get; set; }
         public string? Subject { get; set; }
         public string? Message { get; set; }
+        public bool? IsSent { get; set; }
 
         public EmailDto() { }
 

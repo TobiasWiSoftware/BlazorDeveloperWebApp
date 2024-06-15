@@ -1,0 +1,2 @@
+- Scroll to in introduction should scroll a little higher to the sections in projects
+  Outcomment in js fule scrollTo seems to make no impact even with hard reload?!

@@ -13,23 +13,6 @@ namespace BlazorServer.Pages
     public partial class Index
     {
 
-    
-
-
-        protected override async Task OnAfterRenderAsync(bool firstRender)
-        {
-            if (firstRender)
-            {
-                await JSRuntime.InvokeVoidAsync("Blazor.aos_init", DotNetObjectReference.Create(this));
-
-            }
-        }
-
-
-
-    
-
-
         public Index()
         {
 

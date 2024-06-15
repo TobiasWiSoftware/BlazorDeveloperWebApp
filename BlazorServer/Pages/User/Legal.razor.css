@@ -1,0 +1,65 @@
+﻿/*--------------------------------------------------------------
+# Solution
+--------------------------------------------------------------*/
+.box {
+    padding: 30px;
+    box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
+    transition: 0.3s;
+    height: 100%;
+}
+
+
+
+
+.mylink {
+    color: #007BFF; /* Blaue Link-Farbe */
+    text-decoration: none; /* Keine Unterstreichung normalerweise */
+    cursor: pointer; /* Cursor als Zeiger anzeigen */
+}
+
+mylink:hover, mylink:focus {
+    text-decoration: underline; /* Unterstreichen beim Hovern oder Fokussieren */
+    color: #0056b3; /* Dunklere Blaufarbe beim Hovern */
+}
+
+
+
+
+.box h3 {
+    font-size: 24px;
+    color: #012970;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+
+.box:hover {
+    box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+}
+
+
+    .box:hover img {
+        transform: scale(1.15);
+    }
+
+@media (max-width: 768px) {
+    .solution .box {
+        min-height: unset;
+    }
+}
+
+
+
+.container.aos-init.aos-animate.icons {
+    box-shadow: 0px 0px 5px rgba(1, 41, 112, 0.08) !important;
+    height: 100% !important;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0.5em !important;
+    padding-bottom: 1em !important;
+}
+
+
+

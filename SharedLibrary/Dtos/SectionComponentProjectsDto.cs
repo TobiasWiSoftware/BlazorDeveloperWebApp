@@ -16,12 +16,23 @@ namespace SharedLibrary.Dtos
 
         public List<SectionComponentIconDto>? Icons { get; set; }
 
+        public string? SectionComponentProjectsHtmlId { get; set; }
+
         public SectionComponentProjectsDto(String title, string description, List<SectionComponentProjectDto> sectionComponentProjects, List<SectionComponentIconDto> icons)
         {
             Title = title;
             Description = description;
             SectionComponentProjects = sectionComponentProjects;
             Icons = icons;
+        }
+
+        public SectionComponentProjectsDto(String title, string description, List<SectionComponentProjectDto> sectionComponentProjects, List<SectionComponentIconDto> icons, string sectionComponentProjectsHtmlId)
+        {
+            Title = title;
+            Description = description;
+            SectionComponentProjects = sectionComponentProjects;
+            Icons = icons;
+            SectionComponentProjectsHtmlId = sectionComponentProjectsHtmlId;
         }
         
     }

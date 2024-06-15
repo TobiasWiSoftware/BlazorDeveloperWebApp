@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@using BlazorServer.Components
 
 <header id="header" class="header fixed-top header-scrolled">
     <div class="container-fluid container-xl d-flex align-items-center">
@@ -6,36 +7,8 @@
             <img src="Pictures/elements/favicon.png" alt="">
             <span>Home</span>
         </a>
+        
+        <NavBarComponent/>
 
-        <nav id="navbar" class="navbar mt-2 @(isExpanded ? "navbar-mobile" : "") )">
-            <ul>
-                <li><a class="nav-link" @onclick="CloseNavBar" href="/">Vorstellung</a></li>
-                <li><a class="nav-link" @onclick="CloseNavBar" href="/Leistungen">Leistungen</a></li>
-                <li><a class="nav-link" @onclick="CloseNavBar" href="/Aktuelles">Aktuelles</a></li>
-                <li><a class="nav-link" @onclick="CloseNavBar" href="/Dokumente">Dokumente</a></li>
-                <li><a class="nav-link" @onclick="CloseNavBar" href="/Anfahrt">Anfahrt</a></li>
-                <li><a class="nav-link" @onclick="CloseNavBar" href="/Kontakt">Kontakt</a></li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle" @onclick="ToggleNavbar"></i>
-        </nav><!-- .navbar -->
     </div>
 </header><!-- End Header -->
-@code {
-
-    private bool isExpanded = false;
-
-
-    public void ToggleNavbar()
-    {
-        isExpanded = !isExpanded;
-    }
-
-    public void CloseNavBar()
-    {
-        if (isExpanded)
-        {
-            isExpanded = false;
-        }
-    }
-
-}
