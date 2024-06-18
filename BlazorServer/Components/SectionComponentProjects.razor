@@ -24,7 +24,9 @@
                     <div class="col-xl-6 mt-3" data-aos="fade-up" data-aos-delay="100">
                         <div class="box pb-3">
                             <div class="slider">
-                                <img src=@item.SliderImagesBase64Data[item.ImageOnDisplayIndex] class="my-img" data-aos="fade-up" alt="">
+                                <a href=@item.SliderImagesBase64Data[item.ImageOnDisplayIndex]>
+                                    <img src=@item.SliderImagesBase64Data[item.ImageOnDisplayIndex] class="my-img" data-aos="fade-up" alt="">
+                                </a>
                                 <button @onclick="() => PrevImage(item)" class="arrow prev">&#10094;</button>
                                 <button @onclick="() => NextImage(item)" class="arrow next">&#10095;</button>
                             </div>

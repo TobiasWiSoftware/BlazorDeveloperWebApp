@@ -78,8 +78,7 @@ namespace BlazorServer.Pages.User
                 new(iconsBase64Data: "Pictures/symbols/MySql.png", linkData: "https://www.mysql.com/"),
                 new(iconsBase64Data: "Pictures/symbols/Postgres.png", linkData: "https://www.postgresql.org"),
                 new(iconsBase64Data: "Pictures/symbols/SQLite.png", linkData: "https://www.sqlite.org/index.html"),
-                new(iconsBase64Data: "Pictures/symbols/SqlServer.png", linkData: "https://en.wikipedia.org/wiki/Microsoft_SQL_Server"),
-                new(iconsBase64Data: "Pictures/symbols/AwsLamda", linkData: "https://aws.amazon.com/de/lambda/"),
+                new(iconsBase64Data: "Pictures/symbols/SqlServer.png", linkData: "https://en.wikipedia.org/wiki/Microsoft_SQL_Server")
              },
             "backend"
             ));
@@ -107,7 +106,8 @@ namespace BlazorServer.Pages.User
         new(iconsBase64Data: "Pictures/symbols/Windows.png", linkData: "https://microsoft.com/"),
         new(iconsBase64Data: "Pictures/symbols/VS.png", linkData: "https://visualstudio.microsoft.com/de/"),
         new(iconsBase64Data: "Pictures/symbols/VSC.png", linkData: "https://code.visualstudio.com/"),
-        new(iconsBase64Data: "Pictures/symbols/Git.png", linkData: "https://git-scm.com/")
+        new(iconsBase64Data: "Pictures/symbols/Git.png", linkData: "https://git-scm.com/"),
+        new(iconsBase64Data: "Pictures/symbols/AwsLamda.png", linkData: "https://aws.amazon.com/de/lambda/")
     },
     "devops"
         ));
