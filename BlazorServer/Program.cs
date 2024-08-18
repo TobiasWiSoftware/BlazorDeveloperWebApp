@@ -1,8 +1,18 @@
+using Blazorise;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
+using Blazorise;
+using Blazorise.Bootstrap;
+using Blazorise.Icons.FontAwesome;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add blazorise
+builder.Services
+    .AddBlazorise()
+    .AddBootstrapProviders()
+    .AddFontAwesomeIcons();
 
 // Add services to the container.
 builder.Services.AddRazorPages();

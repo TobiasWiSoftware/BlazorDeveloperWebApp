@@ -11,6 +11,10 @@ namespace BlazorServer.Components
         [Parameter]
         public SectionComponentProjectsDto? SectionComponentItem { get; set; }
 
+        public string selectedSlide = "0";
+
+        public string test = "test";
+
         public SectionComponentProjects()
         {
 

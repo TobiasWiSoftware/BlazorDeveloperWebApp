@@ -5,8 +5,9 @@
     box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
     text-align: center;
     transition: 0.3s;
-    min-height: 32em;
+    min-height: 26em;
 }
+
 
     .solution .box img {
         transition: 0.5s;
@@ -36,7 +37,7 @@
     .slider {
         height: unset !important;
         width: unset !important;  
-        min-height: 18em;
+        min-height: 14em;
     }
 }
 
@@ -64,7 +65,6 @@
 
 /* Style for the slider container */
 .slider {
-    height: 22em;
     width: 36em;/* Set slider width to fill container */
     overflow: hidden; /* Hide anything outside the slider area */
     position: relative; /* Needed for positioni ng arrows absolutely */

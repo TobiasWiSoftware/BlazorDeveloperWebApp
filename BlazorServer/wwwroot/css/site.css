@@ -10,7 +10,7 @@
 # General
 --------------------------------------------------------------*/
 
-img{
+img {
     border-radius: 12px;
 }
 
@@ -93,6 +93,27 @@ section {
 
 
 
+
+
+.carousel .carousel-control-prev-icon,
+.carousel .carousel-control-next-icon {
+    background-color: #4154f1;
+    width: 4em;
+    height: 4em;
+    border-radius: 55%;
+}
+
+.carousel img:hover {
+    transform: scale(1.05); /* Vergrößert das Bild auf das 1,25-fache */
+}
+
+
+
+
+
+
+
+
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
@@ -141,8 +162,21 @@ section {
 /**
 * Desktop Navigation 
 */
+
+@media(max-width: 1100px) {
+    .navbar .mobile-nav-toggle {
+        font-size: 38px !important;
+        display: block;
+    }
+
+    .navbar {
+        margin-left: auto;
+    }
+}
+
+
 .navbar {
-    padding: 0;
+    padding: 0 !important;
 }
 
     .navbar ul {
@@ -164,7 +198,7 @@ section {
         justify-content: space-between;
         padding: 10px 0 10px 30px;
         font-family: "Nunito", sans-serif;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 700;
         color: #013289;
         white-space: nowrap;
@@ -228,6 +262,7 @@ section {
                     }
 
 
+
 @media (max-width: 1366px) {
     .navbar .dropdown .dropdown ul {
         left: -90%;
@@ -265,14 +300,14 @@ section {
 }
 
 .navbar-mobile {
-    position: fixed;
-    overflow: hidden;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: rgba(1, 22, 61, 0.9);
-    transition: 0.3s;
+    position: fixed !important;
+    overflow: hidden !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    background: rgba(1, 22, 61, 0.9) !important;
+    transition: 0.3s !important;
 }
 
     .navbar-mobile .mobile-nav-toggle {
@@ -335,57 +370,57 @@ section {
         border-top: 1px solid #e1ecff;
     }
 
-        h4 {
-            font-size: 18px;
-            margin: 0 0 10px 0;
-            padding: 0;
-            line-height: 1;
-            font-weight: 700;
-            color: #012970;
-        }
+h4 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    color: #012970;
+}
 
-        .footer .footer-newsletter form {
-            margin-top: 20px;
-            background: #fff;
-            padding: 6px 10px;
-            position: relative;
-            border-radius: 4px;
-            border: 1px solid #e1ecff;
-        }
+.footer .footer-newsletter form {
+    margin-top: 20px;
+    background: #fff;
+    padding: 6px 10px;
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid #e1ecff;
+}
 
-            .footer .footer-newsletter form input[type=email] {
-                border: 0;
-                padding: 8px;
-                width: calc(100% - 140px);
-            }
-
-            .footer .footer-newsletter form input[type=submit] {
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                border: 0;
-                background: none;
-                font-size: 16px;
-                padding: 0 30px;
-                margin: 3px;
-                background: #4154f1;
-                color: #fff;
-                transition: 0.3s;
-                border-radius: 4px;
-            }
-
-                .footer .footer-newsletter form input[type=submit]:hover {
-                    background: #5969f3;
-                }
-
-    .footer  {
-        background: white url(../Pictures/elements/footer-bg.png) no-repeat right top;
-        background-size: contain;
-        border-top: 1px solid #e1ecff;
-        border-bottom: 1px solid #e1ecff;
-        padding: 60px 0 30px 0;
+    .footer .footer-newsletter form input[type=email] {
+        border: 0;
+        padding: 8px;
+        width: calc(100% - 140px);
     }
+
+    .footer .footer-newsletter form input[type=submit] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border: 0;
+        background: none;
+        font-size: 16px;
+        padding: 0 30px;
+        margin: 3px;
+        background: #4154f1;
+        color: #fff;
+        transition: 0.3s;
+        border-radius: 4px;
+    }
+
+        .footer .footer-newsletter form input[type=submit]:hover {
+            background: #5969f3;
+        }
+
+.footer {
+    background: white url(../Pictures/elements/footer-bg.png) no-repeat right top;
+    background-size: contain;
+    border-top: 1px solid #e1ecff;
+    border-bottom: 1px solid #e1ecff;
+    padding: 60px 0 30px 0;
+}
 
 @media (max-width: 428px) {
     .footer {
