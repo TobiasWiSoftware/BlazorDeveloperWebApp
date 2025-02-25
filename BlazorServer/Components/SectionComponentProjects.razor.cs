@@ -13,31 +13,10 @@ namespace BlazorServer.Components
 
         public string selectedSlide = "0";
 
-        public string test = "test";
-
         public SectionComponentProjects()
         {
 
         }
-
-
-        public void NextImage(SectionComponentProjectDto item)
-        {
-            if (item != null && item.ImageOnDisplayIndex + 1 < item.SliderImagesBase64Data.Count)
-            {
-                item.ImageOnDisplayIndex++;
-            }
-        }
-
-        public void PrevImage(SectionComponentProjectDto item)
-        {
-            if (item != null && item.ImageOnDisplayIndex  > 0)
-            {
-                item.ImageOnDisplayIndex--;
-            }
-
-        }
-
 
     }
 }

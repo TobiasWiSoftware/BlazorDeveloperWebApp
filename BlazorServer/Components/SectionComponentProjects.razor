@@ -28,13 +28,13 @@
                                     {
                                         @for (int i = 0; i < item.SliderImagesBase64Data.Count; i++)
                                         {
-                                            @(test = item.SliderImagesBase64Data[i])
-                                            <CarouselSlide Name="@i.ToString()" Height="Height.Is100" class="carousel-slide">
-                                                <a href=@item.SliderImagesBase64Data[i]>
-                                                    <Image Source=@item.SliderImagesBase64Data[i] Display="Display.InlineBlock" Width="Width.Is75" />
+                                            int index = i;
+                                            string name = index.ToString();
+                                            <CarouselSlide @key="@index" Name="@name" Height="Height.Is100" class="carousel-slide">
+                                                <a href=@item.SliderImagesBase64Data[index]>
+                                                    <Image Source=@item.SliderImagesBase64Data[index] Display="Display.InlineBlock" Width="Width.Is75" />
                                                 </a>
                                             </CarouselSlide>
-                                                <p>This is a @i with @item.SliderImagesBase64Data[i] and @test</p>
                                         }
                                     }
                                 </Carousel>

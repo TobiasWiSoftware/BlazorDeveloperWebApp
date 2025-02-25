@@ -29,7 +29,7 @@ namespace BlazorServer.Pages.User
                 ),
                 new(
                     title: "E-Commerce Shop entwickelt mit WPF",
-                    description: @"Ein einfaches Tool zur Verwaltung von Produkten inkl. Bildern, Bestellungen und Kundenanmeldungen. Schauen Sie sich den <a href=""https://github.com/TobiasWiSoftware/WebShop"" an",
+                    description: @"Ein einfaches Tool zur Verwaltung von Produkten inkl. Bildern, Bestellungen und Kundenanmeldungen. Schauen Sie sich den <a href=""https://github.com/TobiasWiSoftware/WebShop"" target=""_blank"">Quellcode.</a> an",
                     sliderImagesBase64Data: new List<string> { "Pictures/projects/frontend_wpf_1.png", "Pictures/projects/frontend_wpf_2.png" }
                  )
 
